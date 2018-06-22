@@ -1,0 +1,6 @@
+int 最小为2个字节
+long 最小为4个字节
+long long最小为8个字节
+无符号类型只能保存正数
+带符号类型可以保存负数
+float精度没有double高，float一般为4个字节，double一般位8个字节

@@ -1,0 +1,4 @@
+a.Who goes with Fergus?\012 字符串类型
+b.3.14的10的1次方,long double类型
+c.1024,float类型
+d.3.14,long double类型

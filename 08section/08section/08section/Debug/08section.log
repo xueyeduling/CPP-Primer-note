@@ -1,0 +1,3 @@
+﻿  8.13.cpp
+Debug\test.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+  08section.vcxproj -> E:\CodeAndFile\CPPLanguage\CPPPrimerCode\08section\08section\Debug\08section.exe

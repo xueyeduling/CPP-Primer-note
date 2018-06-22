@@ -1,0 +1,9 @@
+﻿  9.22.cpp
+  ex03.cpp
+Release\test.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+  正在生成代码
+  97 of 97 functions (100.0%) were compiled, the rest were copied from previous compilation.
+    63 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  09section.vcxproj -> E:\CodeAndFile\CPPLanguage\CPPPrimerCode\09section\09section\Release\09section.exe

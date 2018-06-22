@@ -1,0 +1,3 @@
+﻿  6.56.cpp
+Debug\test.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+  06section.vcxproj -> E:\CodeAndFile\CPPLanguage\CPPPrimerCode\06section\06section\Debug\06section.exe

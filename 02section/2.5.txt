@@ -1,0 +1,4 @@
+a.字符字面值，wchar_t字面值，字符串字面值，wchar_t字符串字面值
+b.int,unsigned int,long,unsigned long,八进制,16进制
+c.double,float,long double
+d.int,unsigned,double,double

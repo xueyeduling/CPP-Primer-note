@@ -1,0 +1,7 @@
+/*
+begin有非常量版本和常量版本
+常量对象调用begin返回的是const_iterator
+非常量对象调用begin返回的是iterator
+
+cbegin返回const_iterator
+*/

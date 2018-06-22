@@ -1,0 +1,78 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <cctype>//被包含在iostream中
+#include <cstddef>//定义数组下标size_t和指针相减ptrdiff_t类型
+#include <iterator>//定义库函数begin和end
+#include <cstring>
+#include <stdexcept>
+#include <exception>
+#include <initializer_list>
+#include <cstdlib> // 定义main函数返回类型EXIT_FAILURE和EXIT_SUCCESS
+#include <cassert> // 定义assert
+#include <fstream>
+#include <sstream>
+#include <list>
+#include <array>
+#include <deque>
+#include <forward_list>
+#include <stack>
+#include <queue>
+using std::cout;
+using std::cin;
+using std::endl;
+using std::cerr;
+using std::string;
+using std::vector;
+using std::begin;
+using std::end;
+using std::runtime_error;
+using std::exception;
+using std::initializer_list;
+using std::iostream;
+using std::istream;
+using std::ostream;
+using std::flush;
+using std::ends;
+using std::unitbuf;
+using std::nounitbuf;
+using std::fstream;
+using std::ifstream;
+using std::ofstream;
+using std::stringstream;
+using std::istringstream;
+using std::ostringstream;
+using std::list;
+using std::deque;
+using std::array;
+using std::forward_list;
+using std::to_string;
+using std::stack;
+using std::queue;
+
+typedef string::size_type sz;
+
+int main()
+{
+	//// 在vector上实现空栈
+	//stack<string, vector<string>> str_stk;
+	//// str_stk2在vector上实现，初始化时保存svec的拷贝
+	//stack<string, vector<string>> str_stk2(svec);
+
+	queue<string,vector<string>> que;
+	//stack<string> sta;
+
+	stack<int> intStack; // 空栈
+	// 填满栈
+	for (size_t ix = 0; ix != 10; ++ix)
+		intStack.push(ix); // intStack保存0到9十个数
+	while (!intStack.empty()) { // intStack中有值就继续循环
+		int value = intStack.top();
+		// 使用栈顶值的代码
+		intStack.pop(); // 弹出栈顶元素，继续循环
+	}
+
+
+	system("pause");
+	return 0;
+}
