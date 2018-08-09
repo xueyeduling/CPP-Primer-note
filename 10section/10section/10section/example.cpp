@@ -443,16 +443,26 @@ void ex04()
 	cout << string(line.cbegin(), comma) << endl;
 	// 在一个都好分割的列表中查找最后一个元素
 	string::const_reverse_iterator rcomma = find(line.crbegin(), line.crend(), ',');
-	cout << string((string::const_iterator)rcomma, line.crbegin()) << endl;
+	string::const_reverse_iterator rcomma1 = find(rcomma, line.crend(), ',');
+	// 错误：将逆序输出单词的字符
+	cout << string(line.crbegin(), rcomma) << endl;
+	// 正确：得到一个正向迭代器，从逗号开始读取字符知道line末尾
+	cout << string(rcomma.base(), line.cend()) << endl;
+}
+
+// 10.5 泛型算法结构
+void ex05()
+{
 
 }
 
-int main()
+int main1()
 {
 	//ex01();
 	//ex02();
 	//ex03();
-	ex04();
+	//ex04();
+	ex05();
 
 
 	system("pause");

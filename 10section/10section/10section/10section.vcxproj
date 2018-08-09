@@ -114,6 +114,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="10.36.cpp" />
     <ClCompile Include="example.cpp" />
     <ClCompile Include="test.c" />
     <ClCompile Include="test.cpp" />
