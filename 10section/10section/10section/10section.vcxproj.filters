@@ -24,9 +24,6 @@
     <ClCompile Include="example.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="10.36.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Sales_item.h">

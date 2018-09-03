@@ -456,13 +456,40 @@ void ex05()
 
 }
 
+// 10.6 ÌØ¶¨ÈİÆ÷Ëã·¨
+void ex06()
+{
+	std::list<int> lst{ 1, 2, 3, 4, 5, 6 };
+	std::list<int> lst2{ 7, 8, 9, 10, 11, 12 };
+	std::forward_list<int> flst{ 1, 2, 3, 4, 5, 6 };
+	std::forward_list<int> flst2{ 7, 8, 9, 10, 11, 12 };
+
+	//lst.splice(lst.begin(), lst2);
+	//flst.splice_after(flst.begin(), flst2);
+	/*lst.splice(lst.begin(), lst2, lst2.begin());
+	flst.splice_after(flst.begin(), flst2, flst2.begin()++);*/
+	lst.splice(lst.begin(), lst2, lst2.begin(), lst2.end());
+	flst.splice_after(flst.begin(), flst2, flst2.begin(), flst2.end());
+
+	for each (int var in lst)
+	{
+		cout << var << endl;
+	}
+	cout << "-----------------------------------------" << endl;
+	for each (int var in flst)
+	{
+		cout << var << endl;
+	}
+}
+
 int main1()
 {
 	//ex01();
 	//ex02();
 	//ex03();
 	//ex04();
-	ex05();
+	//ex05();
+	ex06();
 
 
 	system("pause");
