@@ -21,8 +21,16 @@
     <ClCompile Include="test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="10.8.cpp">
+    <ClCompile Include="11.9.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="11.10.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Sales_item.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
