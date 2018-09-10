@@ -25,6 +25,7 @@
 #include <set>
 #include <unordered_map>
 #include <unordered_set>
+#include <utility>
 #include "Sales_data.h"
 using std::cout;
 using std::cin;
@@ -78,6 +79,7 @@ using std::unordered_map;
 using std::unordered_set;
 using std::unordered_multimap;
 using std::unordered_multiset;
+using std::pair;
 
 typedef string::size_type sz;
 
@@ -109,6 +111,20 @@ void ex01()
         << ((w.second > 1) ? " times" : " times") << endl;
 }
 
+pair<string, int>
+process(vector<string> &v)
+{
+    // 处理v
+    if (!v.empty())
+        return{ v.back(), v.back().size() };    // 列表初始化
+    /*if (!v.empty())
+        return pair<string, int>(v.back(), v.back().size());*/
+    /*if (!v.empty())
+        return make_pair(v.back(), v.back().size());*/
+    else
+        return pair<string, int>();             // 隐式构造返回值
+}
+
 // 11.2
 void ex02()
 {
@@ -138,8 +154,23 @@ void ex02()
 
     // bookstore中多条记录可以有相同的ISBN
     // bookstore中的元素以ISBN的顺序进行排序
-    multiset<Sales_data, decltype(compareIsbn) *>
-        bookstore(compareIsbn);
+    /*multiset<Sales_data, decltype(compareIsbn) *>
+        bookstore(compareIsbn);*/
+
+    pair<string, string> anon;      // 保存两个string
+    pair<string, size_t> word_count;    // 保存一个string和一个size_t
+    pair<string, vector<int>> line;     // 保存string和vector<int>
+    // 可以为每个成员提供值初始化器
+    pair<string, string> author{ "James", "Joyce" };
+}
+
+void ex03()
+{
+    set<string>::value_type v1;         // v1是一个string
+    set<string>::key_type v2;           // v2是一个string
+    map<string, int>::value_type v3;    // v3是一个pair<const string, int>
+    map<string, int>::key_type v4;      // v4是一个string
+    map<string, int>::mapped_type v5;   // v5是一个int
 }
 
 int main1()
