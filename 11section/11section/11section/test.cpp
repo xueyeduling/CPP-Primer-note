@@ -82,6 +82,10 @@ typedef string::size_type sz;
 
 int main2()
 {
+    map<int, int> iimap;
+    iimap.insert({ 1, 2 });
+    iimap.insert({ 1, 3 });
+    iimap.emplace(1, 5);
 
     system("pause");
     return 0;
