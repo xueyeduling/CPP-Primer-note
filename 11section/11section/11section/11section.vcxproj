@@ -64,7 +64,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="11.36.cpp" />
     <ClCompile Include="example.cpp" />
     <ClCompile Include="test.cpp" />
   </ItemGroup>

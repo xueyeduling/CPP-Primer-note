@@ -25,6 +25,7 @@
 #include <set>
 #include <unordered_map>
 #include <unordered_set>
+#include <utility>
 using std::cout;
 using std::cin;
 using std::endl;
@@ -77,6 +78,8 @@ using std::unordered_map;
 using std::unordered_set;
 using std::unordered_multimap;
 using std::unordered_multiset;
+using std::pair;
+using std::hash;
 
 typedef string::size_type sz;
 

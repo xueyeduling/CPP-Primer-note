@@ -80,6 +80,7 @@ using std::unordered_set;
 using std::unordered_multimap;
 using std::unordered_multiset;
 using std::pair;
+using std::hash;
 
 typedef string::size_type sz;
 
@@ -340,6 +341,21 @@ void ex03()
     input.open("input.txt");
     word_transform(map_file, input);*/
 
+}
+
+size_t hasher(const Sales_data &sd)
+{
+    return hash<string>()(sd.isbn());
+}
+
+bool eqOp(const Sales_data &lhs, const Sales_data &rhs)
+{
+    return lhs.isbn() == rhs.isbn();
+}
+
+void ex04()
+{
+    /*
     // 统计出现次数，但单词不会按字典序排列
     unordered_map<string, size_t> word_count;
     string word;
@@ -348,9 +364,18 @@ void ex03()
     for (const auto &w : word_count)    // 对map中的每个元素
         // 打印结果
         cout << w.first << " occurs " << w.second << (w.second > 1 ? " times" : " time") << endl;
+    */
+
+    using SD_multiset = unordered_multiset<Sales_data,
+        decltype(hasher)*, decltype(eqOp)*>;
+    // 参数是桶大小、哈希函数指针和相等性判断运算符指针
+    SD_multiset bookstore(42, hasher, eqOp);
+
+    // 使用FooHash生成哈希值; Foo必须有==运算符
+    //unordered_set<Foo, decltype(FooHash)*> fooSet(10, FooHash);
 }
 
-int main()
+int main1()
 {
     //ex01();
     //ex02();
